@@ -1,0 +1,35 @@
+# This is the configuration used to check the rubocop source code.
+
+AllCops:
+  TargetRubyVersion: 1.9
+
+Style/Encoding:
+  EnforcedStyle: always
+  Enabled: true
+
+Style/StringLiterals:
+  Description: Checks if uses of quotes match the configured preference.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#consistent-string-literals
+  Enabled: true
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+  - single_quotes
+  - double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Description: Checks if uses of quotes inside expressions in interpolated strings
+    match the configured preference.
+  Enabled: true
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+  - single_quotes
+  - double_quotes
+
+Style/Encoding:
+  Description: Use UTF-8 as the source file encoding.
+  StyleGuide: https://github.com/bbatsov/ruby-style-guide#utf-8
+  Enabled: false
+  EnforcedStyle: always
+  SupportedStyles:
+  - when_needed
+  - always
